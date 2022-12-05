@@ -16,9 +16,7 @@ app.use(logger);
 // built-in middleware for json
 app.use(express.json());
 
-app.get("/", (req, res) => {
-  res.send("Homepage");
-});
+app.use("/users", require("./routes/api/users"));
 
 app.listen(PORT, () => {
   // eslint-disable-next-line no-console
