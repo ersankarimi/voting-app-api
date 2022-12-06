@@ -12,4 +12,5 @@ router
   .route("/:nim")
   .post(usersController.updateUserData)
   .delete(usersController.deleteUser);
+
 module.exports = router;
