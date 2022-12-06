@@ -17,6 +17,7 @@ app.use(logger);
 app.use(express.json());
 
 app.use("/users", require("./routes/api/users"));
+app.use("/majors", require("./routes/api/majors"));
 
 app.listen(PORT, () => {
   // eslint-disable-next-line no-console
