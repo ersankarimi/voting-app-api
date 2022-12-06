@@ -8,6 +8,8 @@ router
   .get(usersController.getAllUser)
   .post(usersController.insertUser);
 
-router.route("/:nim").post(usersController.updateUserData);
-
+router
+  .route("/:nim")
+  .post(usersController.updateUserData)
+  .delete(usersController.deleteUser);
 module.exports = router;
