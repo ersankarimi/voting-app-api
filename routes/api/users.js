@@ -8,4 +8,6 @@ router
   .get(usersController.getAllUser)
   .post(usersController.insertUser);
 
+router.route("/:nim").post(usersController.updateUserData);
+
 module.exports = router;
