@@ -1,6 +1,6 @@
 const { connection } = require("../config/dbConn");
 
-const getAllUser = async (req, res) => {
+const getAllUser = (req, res) => {
   connection.query("SELECT * FROM pengguna", (err, rows) => {
     if (err) {
       return res.status(400).json({
@@ -19,7 +19,7 @@ const getAllUser = async (req, res) => {
   });
 };
 
-const insertUser = async (req, res) => {
+const insertUser = (req, res) => {
   const { nim, nama_lengkap, id_prodi, angkatan, jenis_kelamin } = req.body;
 
   connection.query(
