@@ -6,7 +6,6 @@ const insertMajors = (req, res) => {
     `CALL insert_data_jurusan(?, ?)`,
     [id_jurusan, nama_jurusan],
     (err, rows) => {
-      console.log(err, rows);
       if (err) {
         return res.status(400).json({
           errors: {
